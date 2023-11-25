@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Custom 404{% endblock %}
+
+{% block content %}
+  <div class="container position-relative">
+    <img src="errors/error_404.jpg" class="img-fluid position-absolute">
+    <p>Страницы с адресом {{ request.path }} не существует</p>
+    <a href="{% url 'pages:homepage' %}">Идите на главную</a>
+  </div>  
+{% endblock %} 
